@@ -13,63 +13,109 @@ A full-stack web application that acts as an AI agent to fetch Islamic prayer (n
 - **Beautiful UI**: Modern, responsive design with gradient backgrounds
 - **Cross-platform**: Works on desktop, tablet, and mobile devices
 
-## 📁 Project Structure
+## 📦 Prerequisites
+
+Before running this project, ensure you have the following installed:
+
+- **Node.js** (v14 or higher)
+- **npm** (v6 or higher) - comes with Node.js
+- **Git** installed on your system
+- **Internet connection** (for API calls to Aladhan Prayer Times API)
+- **VS Code** or any code editor (optional but recommended)
+
+### Environment Setup
+If the project requires environment variables, create `.env` files in both directories:
+- `frontend/.env` (if needed)
+- `backend/.env` (if needed)
+
+## 📁 Folder Structure
 
 ```
-islamic-prayer-agent/
-├── frontend/           # React.js application
-│   ├── public/
+Prayer-Timming/
+├── frontend/
 │   ├── src/
-│   ├── package.json
-│   └── README.md
-├── backend/            # Node.js + Express server
+│   │   ├── App.js              # Main React component
+│   │   ├── index.js            # React entry point
+│   │   └── index.css           # Global styles
+│   ├── public/
+│   │   └── index.html          # HTML template
+│   ├── package.json            # Frontend dependencies
+│   └── README.md               # Frontend documentation
+├── backend/
 │   ├── routes/
-│   ├── package.json
-│   ├── server.js
-│   └── README.md
-├── .gitignore
-└── README.md          # This file
+│   │   └── prayer.js           # API routes
+│   ├── server.js               # Express server
+│   ├── package.json            # Backend dependencies
+│   └── README.md               # Backend documentation
+├── .gitignore                  # Git ignore rules
+└── README.md                   # This file
 ```
 
-## 🛠️ Quick Start
+## 🛠️ How to Run the Project
 
-### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn
+Follow these steps to set up and run the project locally:
 
-### Installation & Setup
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/Osairem/Prayer-Timming.git
+cd Prayer-Timming
+```
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd islamic-prayer-agent
-   ```
+### Step 2: Set Up the Backend
 
-2. **Install Backend Dependencies**
+1. **Navigate to the backend directory**
    ```bash
    cd backend
+   ```
+
+2. **Install backend dependencies**
+   ```bash
    npm install
    ```
 
-3. **Install Frontend Dependencies**
+3. **Start the backend server**
    ```bash
-   cd ../frontend
-   npm install
-   ```
-
-4. **Start the Backend Server**
-   ```bash
-   cd ../backend
    npm run dev
    ```
-   The backend will run on `http://localhost:5000`
+   
+   The backend will start on: **http://localhost:5000**
 
-5. **Start the Frontend Application**
+### Step 3: Set Up the Frontend
+
+1. **Open a new terminal window/tab**
+
+2. **Navigate to the frontend directory**
    ```bash
-   cd ../frontend
+   cd frontend
+   ```
+
+3. **Install frontend dependencies**
+   ```bash
+   npm install
+   ```
+
+4. **Start the frontend development server**
+   ```bash
    npm start
    ```
-   The frontend will open at `http://localhost:3000`
+   
+   The frontend will open automatically at: **http://localhost:3000**
+
+### Step 4: Access the Application
+
+- **Frontend**: Open your browser and go to `http://localhost:3000`
+- **Backend API**: Available at `http://localhost:5000/api/getPrayerTimes`
+
+### Available Scripts
+
+**Backend Scripts:**
+- `npm start` - Runs the server in production mode
+- `npm run dev` - Runs the server with nodemon for development
+
+**Frontend Scripts:**
+- `npm start` - Runs the app in development mode
+- `npm run build` - Builds the app for production
+- `npm test` - Launches the test runner
 
 ## 🎯 How It Works
 
